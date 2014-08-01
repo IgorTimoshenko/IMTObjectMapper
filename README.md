@@ -6,7 +6,8 @@
 
 ## Overview ##
 
-...
+This library provides a simple, powerful and fully customizable tool for mapping
+objects to non-relational databases.
 
 ## Installation ##
 
@@ -20,7 +21,7 @@ To install `IMTObjectMapper` with [Composer][1] just add the following to your
     // ...
     "require": {
         // ...
-        "imt/object-mapper": "0.9.*"
+        "imt/object-mapper": "dev-master"
         // ...
     }
     // ...
