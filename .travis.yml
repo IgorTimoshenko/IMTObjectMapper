@@ -12,13 +12,13 @@ matrix:
     - php: 5.6
     - php: hhvm
 
+before_install: echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
 install:
   - composer self-update
   - composer install --dev
 
 services: mongodb
-
-before_script: echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 script: make test
 
