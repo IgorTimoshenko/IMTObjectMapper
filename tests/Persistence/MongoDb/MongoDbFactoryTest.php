@@ -47,7 +47,7 @@ class MongoDbFactoryTest extends \PHPUnit_Framework_TestCase
                 '',
                 'test',
                 array(
-                    'timeout' => 2000,
+                    'connectTimeoutMS' => 2000,
                 )
             )
         );
