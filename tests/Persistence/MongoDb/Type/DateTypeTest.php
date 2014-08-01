@@ -70,15 +70,17 @@ class DateTypeTest extends \PHPUnit_Framework_TestCase
     public function testToPhpNumeric()
     {
         $time = time();
+        $now = new \DateTime();
 
-        $this->assertEquals((new \DateTime())->setTimestamp($time), $this->type->toPhp($time));
+        $this->assertEquals($now->setTimestamp($time), $this->type->toPhp($time));
     }
 
     public function testToPhpString()
     {
         $time = (string) time();
+        $now = new \DateTime();
 
-        $this->assertEquals((new \DateTime())->setTimestamp($time), $this->type->toPhp($time));
+        $this->assertEquals($now->setTimestamp($time), $this->type->toPhp($time));
     }
 
     public function testToPhpInvalid()
