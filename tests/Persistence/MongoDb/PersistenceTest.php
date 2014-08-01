@@ -42,7 +42,9 @@ class PersistenceTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUpBeforeClass();
 
-        self::$mongoDb = (new MongoDbFactory())->create(
+        $mongoDbFactory = new MongoDbFactory();
+
+        self::$mongoDb = $mongoDbFactory->create(
             '127.0.0.1',
             27017,
             '',
