@@ -119,7 +119,7 @@ class CriteriaTest extends \PHPUnit_Framework_TestCase
     public function testVisitClauseTypeSpecified()
     {
         $criteria = new Criteria();
-        $criteria->addClause('f1', 'v1', null, 'id');
+        $criteria->addClause('f1', null, null, 'id');
 
         $query = $this->criteriaVisitor->visitClause($criteria);
 
