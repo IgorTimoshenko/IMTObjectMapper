@@ -40,8 +40,8 @@ class MongoDbFactory
 
         $options = array_merge($this->defaultOptions, $options);
 
-        $mongo = new \Mongo($server, $options);
+        $mongoClient = new \MongoClient($server, $options);
 
-        return $mongo->$db;
+        return $mongoClient->selectDB($db);
     }
 }
