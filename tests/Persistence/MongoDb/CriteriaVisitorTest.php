@@ -129,8 +129,10 @@ class CriteriaTest extends \PHPUnit_Framework_TestCase
 
     public function testVisitClauseComparisonAndTypeSpecified()
     {
+        $now = new \DateTime();
+
         $criteria = new Criteria();
-        $criteria->addClause('f1', (new \DateTime())->getTimestamp(), Criteria::COMPARISON_LTE, 'date');
+        $criteria->addClause('f1', $now->getTimestamp(), Criteria::COMPARISON_LTE, 'date');
 
         $query = $this->criteriaVisitor->visitClause($criteria);
 
