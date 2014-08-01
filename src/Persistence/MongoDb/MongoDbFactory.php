@@ -20,7 +20,7 @@ class MongoDbFactory
      * @var array
      */
     private $defaultOptions = array(
-        'timeout' => 10000,
+        'connectTimeoutMS' => 10000,
     );
 
     /**
