@@ -279,7 +279,11 @@ class PersistenceTest extends \PHPUnit_Framework_TestCase
     {
         $document = $this->insertDocument(array('f' => 'v'));
 
-        $this->assertTrue($this->persistence->remove($document['id'], $this->metadata));
+	$returnStatement = $this->persistence->remove($document['id'], $this->metadata);
+
+	$this->assertInternalType('array', $returnStatement);
+	$this->assertArrayHasKey('ok', $returnStatement);
+	$this->assertEquals('1.0', $returnStatement);
     }
 
     /**
