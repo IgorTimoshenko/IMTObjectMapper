@@ -283,7 +283,7 @@ class PersistenceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInternalType('array', $returnStatement);
         $this->assertArrayHasKey('ok', $returnStatement);
-        $this->assertEquals(1.0, $returnStatement);
+        $this->assertGreaterThan(0, (int) $returnStatement);
     }
 
     /**
