@@ -66,6 +66,8 @@ class DateType implements TypeInterface
             );
         }
 
-        return (new \DateTime())->setTimestamp($timestamp);
+        $now = new \DateTime();
+
+        return $now->setTimestamp($timestamp);
     }
 }

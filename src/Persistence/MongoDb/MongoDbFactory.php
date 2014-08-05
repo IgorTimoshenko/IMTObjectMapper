@@ -42,6 +42,6 @@ class MongoDbFactory
 
         $mongoClient = new \MongoClient($server, $options);
 
-        return $mongoClient->selectDB($db);
+        return $mongoClient->$db;
     }
 }
