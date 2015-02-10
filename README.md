@@ -18,13 +18,9 @@ To install `IMTObjectMapper` with [Composer][1] just add the following to your
 
 ```json
 {
-    // ...
     "require": {
-        // ...
         "imt/object-mapper": "dev-master"
-        // ...
     }
-    // ...
 }
 ```
 
